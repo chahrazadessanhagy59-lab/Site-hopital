@@ -1,0 +1,174 @@
+/* RESET */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Animation globale */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    animation: fadeIn 1.2s ease-in-out;
+}
+
+/* Animation fade-in */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* -------------------- HEADER -------------------- */
+header {
+    background-color: rgb(190, 184, 179);
+    color: #fff;
+    height: 10vh;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 30px;
+    color: rgb(0, 153, 255);
+    transition: transform 0.3s ease;
+}
+.logo:hover {
+    transform: scale(1.1);
+}
+
+/* NAVIGATION */
+nav ul {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 15px;
+    font-size: 20px;
+    transition: all 0.3s ease-in-out;
+}
+
+nav ul li a:hover {
+    color: cornflowerblue;
+    transform: translateY(-3px);
+}
+
+/* Trait animé sous les liens */
+nav ul li a::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background: cornflowerblue;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: cornflowerblue;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+/* -------------------- SECTION PRINCIPALE -------------------- */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    background-image: url(../img1/thF.webp);
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+    transition: transform 3s ease;
+}
+
+/* zoom lent sur image */
+.container:hover {
+    transform: scale(1.02);
+}
+
+.container h2 {
+    background-color: rgb(0, 153, 255);
+    color: white;
+    font-size: 40px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    transition: transform 0.4s ease;
+}
+
+.container h2:hover {
+    transform: rotate(-1deg) scale(1.05);
+}
+
+.contenu {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 25px;
+    width: 700px;
+    margin-top: 10px;
+    font-size: 24px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    animation: slideUp 1.2s ease;
+}
+
+/* Animation montée */
+@keyframes slideUp {
+    from { transform: translateY(40px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+/* BOUTON RENDEZ-VOUS */
+.contenu a {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 20px;
+    font-size: 20px;
+    background-color: rgb(0, 153, 255);
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: 0.3s ease-in-out;
+}
+
+.contenu a:hover {
+    background-color: cornflowerblue;
+    transform: scale(1.1);
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
+}
+
+/* -------------------- FOOTER -------------------- */
+footer {
+    background-color: rgb(190, 184, 179);
+    color: black;
+    height: 15vh;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 5px;
+    animation: fadeIn 2s ease;
+}
+
+footer p {
+    transition: color 0.3s;
+}
+
+footer p:hover {
+    color: rgb(0, 153, 255);
+}
